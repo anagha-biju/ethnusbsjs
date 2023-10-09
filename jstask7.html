@@ -71,3 +71,48 @@
             text-align: center;
             color: #364f6b;
         }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Train GIF Animation</h1>
+        <img id="trainGif" src="toy train.jpg" alt="Train GIF">
+    </div>
+    <h2>Click the following buttons to handle animation</h2>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    <button id="reset">Reset</button>
+    <script>
+
+        let animationInterval;
+        let position = 0;
+
+        document.getElementById('startButton').addEventListener('click', function () {
+            const trainGif = document.getElementById('trainGif');
+            trainGif.style.display = 'block';
+
+            if (!animationInterval) {
+                animationInterval = setInterval(() => {
+                    position += 2;
+                    trainGif.style.marginLeft = position + 'px';
+                }, 100);
+            }
+        });
+
+        document.getElementById('stopButton').addEventListener('click', function () {
+            clearInterval(animationInterval);
+            animationInterval = null;
+        });
+
+            document.getElementById('reset').addEventListener('click', function () {
+                clearInterval(animationInterval);
+                animationInterval = null;
+                const trainGif = document.getElementById('trainGif');
+                position = 0;
+                trainGif.style.marginLeft = position + 'px';
+            })
+    </script>
+</body>
+
+</html>
