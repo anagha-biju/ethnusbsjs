@@ -71,3 +71,37 @@ JS-Task6
             </div>
 
             <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">Log in <span
+                            class="glyphicon glyphicon-submit"></span></button>
+                </div>
+            </div>
+
+            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+            <label class="form-check-label" for="firstCheckbox">Remeber me</label>
+            &emsp;
+            <a href="JS-Task3.html" id="fp1">Forgot Password?</a>
+
+        </form>
+        <h5>Don't have account! <a href="CSS-Task7.html">Sign Up here. </a></h5>
+    </div>
+
+    <script>
+        document.getElementById('contact_form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var username = document.getElementsByName('first_name')[0].value;
+            var password = document.getElementsByName('password')[0].value;
+
+            if (username === username && password === username) {
+                alert('Login successful!');
+            } else {
+                alert('Invalid username or password.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
