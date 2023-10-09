@@ -71,3 +71,30 @@
 
             nameError.textContent = "";
             emailError.textContent = "";
+            webError.textContent = "";
+            messageError.textContent = "";
+
+            if (username.value == "") {
+                nameError.textContent = "This field cannout be blank";
+                username.classList.add('input-error');
+            }
+
+            if (email.value == "") {
+                emailError.textContent = "A valid email is required";
+                email.classList.add('input-error');
+            }
+
+            if (website.value == "") {
+                webError.textContent = "A valid url is required";
+                website.classList.add('input-error');
+            }
+
+            if (message.value == "") {
+                messageError.textContent = "This field cannout be blank";
+                message.classList.add('input-error');
+            }
+        }
+    </script>
+</body>
+
+</html>
